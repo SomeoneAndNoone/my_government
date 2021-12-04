@@ -28,7 +28,15 @@ class NewsPageState extends PagesState {
   int get index => 1;
 }
 
-class LeadersPageState extends PagesState {
+// class LeadersPageState extends PagesState {
+//   @override
+//   List<Object?> get props => [];
+//
+//   @override
+//   int get index => 2;
+// }
+
+class SavedMessagesPageState extends PagesState {
   @override
   List<Object?> get props => [];
 
@@ -36,20 +44,12 @@ class LeadersPageState extends PagesState {
   int get index => 2;
 }
 
-class SavedMessagesPageState extends PagesState {
-  @override
-  List<Object?> get props => [];
-
-  @override
-  int get index => 3;
-}
-
 class AccountPageState extends PagesState {
   @override
   List<Object?> get props => [];
 
   @override
-  int get index => 4;
+  int get index => 3;
 }
 // END -------------- PAGES STATE ------------
 

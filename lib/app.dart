@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:my_government/ui/pages/main/main_page.dart';
+import 'package:my_government/utils/colors.dart';
 
 class MyApp extends StatelessWidget {
   final GlobalKey<NavigatorState> _navigatorKey = GlobalKey<NavigatorState>();
@@ -17,9 +18,10 @@ class MyApp extends StatelessWidget {
       builder: () {
         return MaterialApp(
           debugShowCheckedModeBanner: false,
-          title: 'Flutter Demo',
+          title: 'My Government',
           theme: ThemeData(
-            primarySwatch: Colors.blue,
+            fontFamily: 'Gilroy',
+            primaryColor: AppColors.primaryColor,
           ),
           home: MainPage(),
         );

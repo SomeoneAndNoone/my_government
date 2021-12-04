@@ -16,10 +16,10 @@ class MainBloc extends Bloc<MainEvent, MainState> {
             emit(NewsPageState());
             break;
           case 2:
-            emit(LeadersPageState());
+            emit(SavedMessagesPageState());
             break;
           case 3:
-            emit(SavedMessagesPageState());
+            emit(AccountPageState());
             break;
         }
       },

@@ -33,6 +33,7 @@ dependencies:
   pull_to_refresh: ^2.0.0
   curved_navigation_bar: ^1.0.1
   flutter_svg: ^1.0.0
+  google_fonts: ^2.1.0
 
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
@@ -51,6 +52,13 @@ flutter:
   assets:
     - assets/
     - assets/icons/
+  fonts:
+    - family: Gilroy
+      fonts:
+        - asset: assets/fonts/Gilroy-Light.otf
+    - family: Gilroy Bold
+      fonts:
+        - asset: assets/fonts/Gilroy-ExtraBold.otf
 
 flutter_intl:
   enabled: true

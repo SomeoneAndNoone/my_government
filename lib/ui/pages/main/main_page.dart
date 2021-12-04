@@ -3,13 +3,14 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:my_government/ui/components/snackbars.dart';
 import 'package:my_government/ui/pages/main/bloc/main_bloc.dart';
 import 'package:my_government/ui/pages/main/bloc/main_event.dart';
 import 'package:my_government/ui/pages/main/bloc/main_state.dart';
 import 'package:my_government/ui/pages/main/views/account_page_view.dart';
-import 'package:my_government/ui/pages/main/views/leaders_view.dart';
 import 'package:my_government/ui/pages/main/views/main_view.dart';
 import 'package:my_government/ui/pages/main/views/news_view.dart';
+import 'package:my_government/ui/pages/main/views/saved_messages_view.dart';
 import 'package:my_government/utils/colors.dart';
 import 'package:my_government/utils/images.dart';
 
@@ -30,19 +31,19 @@ class MainPageView extends StatefulWidget {
 }
 
 class _MainPageViewState extends State<MainPageView> {
-  // @override
-  // void initState() {
-  //   context.read<MainBloc>().stream.listen((state) {
-  //     if (state is MessagesPageState) {
-  //       AppSnackBar.showInfo(
-  //         ScaffoldMessenger.of(context),
-  //         iconData: Icons.done,
-  //         title: state.message,
-  //       );
-  //     }
-  //   });
-  //   super.initState();
-  // }
+  @override
+  void initState() {
+    context.read<MainBloc>().stream.listen((state) {
+      if (state is MessagesPageState) {
+        AppSnackBar.showInfo(
+          ScaffoldMessenger.of(context),
+          iconData: Icons.done,
+          title: state.message,
+        );
+      }
+    });
+    super.initState();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -61,13 +62,18 @@ class _MainPageViewState extends State<MainPageView> {
                   semanticsLabel: 'Asosiy',
                 ),
                 SvgPicture.asset(
-                  AppImages.heartIcon,
+                  AppImages.newsIcon,
                   color: state.index == 1 ? AppColors.primaryColor : AppColors.grey,
+                  semanticsLabel: 'Yangiliklar',
+                ),
+                SvgPicture.asset(
+                  AppImages.heartIcon,
+                  color: state.index == 2 ? AppColors.primaryColor : AppColors.grey,
                   semanticsLabel: 'Saqlangan',
                 ),
                 SvgPicture.asset(
                   AppImages.userIcon,
-                  color: state.index == 2 ? AppColors.primaryColor : AppColors.grey,
+                  color: state.index == 3 ? AppColors.primaryColor : AppColors.grey,
                   semanticsLabel: 'Profil',
                 ),
               ],
@@ -80,12 +86,16 @@ class _MainPageViewState extends State<MainPageView> {
           state is PagesState;
           print('Khamidjon: new state come: $state');
           if (state is OrganisationsPageState) {
-            return MainView();
+            return OrganisationView();
           } else if (state is NewsPageState) {
             return NewsView();
-          } else if (state is LeadersPageState) {
-            return LeadersView();
-          } else if (state is SavedMessagesPageState) {
+          }
+          // else if (state is LeadersPageState) {
+          //   return LeadersView();
+          // }
+          else if (state is SavedMessagesPageState) {
+            return SavedMessagesView();
+          } else if (state is AccountPageState) {
             return AccountPageView();
           }
           return Container(
