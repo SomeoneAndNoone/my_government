@@ -13,6 +13,7 @@ class MainPage extends StatefulWidget {
 }
 
 class _MainPageState extends State<MainPage> {
+  int _selectedIndex = 0;
   @override
   Widget build(BuildContext context) {
     double iconSize = 24.r;
@@ -20,27 +21,25 @@ class _MainPageState extends State<MainPage> {
       bottomNavigationBar: CurvedNavigationBar(
         backgroundColor: Colors.blue,
         items: <Widget>[
-          SvgPicture.asset(AppImages.homeIcon,
-              // color: Colors.red,
-              semanticsLabel: 'Home'),
-          SvgPicture.asset(AppImages.homeIcon,
-              // color: Colors.red,
-              semanticsLabel: 'Home'),
-          SvgPicture.asset(AppImages.homeIcon,
-              // color: Colors.red,
-              semanticsLabel: 'Home'),
-          Icon(
-            Icons.compare_arrows,
-            size: iconSize,
-            color: AppColors.primaryColor,
+          SvgPicture.asset(
+            AppImages.homeIcon,
+            color: _selectedIndex == 0 ? AppColors.primaryColor : AppColors.grey,
+            semanticsLabel: 'Asosiy',
           ),
-          Icon(
-            Icons.person,
-            size: iconSize,
-            color: AppColors.primaryColor,
+          SvgPicture.asset(
+            AppImages.heartIcon,
+            color: _selectedIndex == 1 ? AppColors.primaryColor : AppColors.grey,
+            semanticsLabel: 'Saqlangan',
+          ),
+          SvgPicture.asset(
+            AppImages.userIcon,
+            color: _selectedIndex == 2 ? AppColors.primaryColor : AppColors.grey,
+            semanticsLabel: 'Profil',
           ),
         ],
         onTap: (index) {
+          _selectedIndex = index;
+          setState(() {});
           //Handle button tap
         },
       ),
