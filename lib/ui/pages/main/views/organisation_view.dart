@@ -1,6 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:my_government/ui/pages/main/bloc/main_bloc.dart';
+import 'package:my_government/ui/pages/main/bloc/main_state.dart';
+import 'package:my_government/ui/pages/main/components/organisation_big_card.dart';
 import 'package:my_government/utils/colors.dart';
 import 'package:my_government/utils/images.dart';
 
@@ -10,12 +14,15 @@ class OrganisationView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: EdgeInsets.symmetric(horizontal: 28.w),
+      padding: EdgeInsets.only(left: 28.w),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           SizedBox(height: 20.h),
-          const _SearchWidget(),
+          Padding(
+            padding: EdgeInsets.only(right: 28.w),
+            child: const _SearchWidget(),
+          ),
           SizedBox(height: 20.h),
           Text(
             'Qaysi tashkilotni\nizlayapsiz ?',
@@ -24,10 +31,34 @@ class OrganisationView extends StatelessWidget {
               fontFamily: 'Gilroy Bold',
               fontWeight: FontWeight.w300,
             ),
-          )
+          ),
+          SizedBox(height: 12.h),
+          _OrganisationsListWidget(),
         ],
       ),
     );
+  }
+}
+
+class _OrganisationsListWidget extends StatelessWidget {
+  const _OrganisationsListWidget({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return BlocBuilder<MainBloc, MainState>(
+        buildWhen: (p, c) => c is OrganisationsPageState,
+        builder: (context, state) {
+          state as OrganisationsPageState;
+          return Container(
+            height: 250.h,
+            child: ListView.builder(
+              physics: const BouncingScrollPhysics(),
+              itemCount: state.mainOrganisations.length,
+              itemBuilder: (c, i) => OrganisationBigCard(state.mainOrganisations[i]),
+              scrollDirection: Axis.horizontal,
+            ),
+          );
+        });
   }
 }
 

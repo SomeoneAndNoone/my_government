@@ -1,4 +1,5 @@
 import 'package:equatable/equatable.dart';
+import 'package:my_government/models/organisation.dart';
 
 abstract class MainState extends Equatable {}
 
@@ -13,8 +14,19 @@ abstract class PagesState extends MainState {
 }
 
 class OrganisationsPageState extends PagesState {
+  final List<Organisation> mainOrganisations;
+  final List<Organisation> bestRatingOrganisations;
+
+  OrganisationsPageState({
+    required this.mainOrganisations,
+    required this.bestRatingOrganisations,
+  });
+
   @override
-  List<Object?> get props => [];
+  List<Object?> get props => [
+        mainOrganisations,
+        bestRatingOrganisations,
+      ];
 
   @override
   int get index => 0;

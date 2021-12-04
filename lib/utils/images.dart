@@ -5,4 +5,5 @@ abstract class AppImages {
   static String newsIcon = 'assets/icons/news_icon.svg';
   static String filtersIcons = 'assets/icons/filters.svg';
   static String searchIcon = 'assets/icons/search.svg';
+  static String starIcon = 'assets/icons/star.svg';
 }
