@@ -5,4 +5,5 @@ abstract class FakeImages {
   static const String uzmobile = 'assets/fake_images/uzmobile.png';
   static const String profileBackgr = 'assets/images/profil_background.png';
   static const String profile = 'assets/images/profile.png';
+  static const String jonBlack = 'assets/images/jon_black.jpeg';
 }

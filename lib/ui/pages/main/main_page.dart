@@ -49,6 +49,7 @@ class _MainPageViewState extends State<MainPageView> {
   Widget build(BuildContext context) {
     double iconSize = 24.r;
     return Scaffold(
+      backgroundColor: AppColors.screen,
       bottomNavigationBar: BlocBuilder<MainBloc, MainState>(
           buildWhen: (prev, cur) => cur is PagesState,
           builder: (context, state) {

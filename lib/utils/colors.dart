@@ -9,4 +9,8 @@ abstract class AppColors {
   static const Color searchTextColor = Color(0xffD2D2D2);
   static const Color cardBackground = Color(0xfff3f3f3);
   static const Color cameraBackgr = Color(0xffC6BAFF);
+  static const Color sharhlarTarixiBackgr = Color(0xffFFC5B1);
+  static const Color dasturHaqidaBackgr = Color(0xffC6BAFF);
+  static const Color sozlamalarBackgr = Color(0xffBCF6FF);
+  static const Color chiqishBackgr = Color(0xffFFEAC8);
 }
