@@ -15,8 +15,8 @@ class OrganisationView extends StatelessWidget {
   Widget build(BuildContext context) {
     return Padding(
       padding: EdgeInsets.only(left: 28.w),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
+      child: ListView(
+        // crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           SizedBox(height: 20.h),
           Padding(
@@ -34,6 +34,29 @@ class OrganisationView extends StatelessWidget {
           ),
           SizedBox(height: 12.h),
           _OrganisationsListWidget(),
+          SizedBox(height: 14.h),
+          Padding(
+            padding: EdgeInsets.only(right: 28.w),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Text(
+                  'Eng yaxshi reytinglar',
+                  style: TextStyle(
+                    fontSize: 20.sp,
+                    fontWeight: FontWeight.w600,
+                  ),
+                ),
+                Text(
+                  'Hammasi',
+                  style: TextStyle(
+                    fontSize: 16.sp,
+                    color: AppColors.primaryColor,
+                  ),
+                ),
+              ],
+            ),
+          ),
         ],
       ),
     );
