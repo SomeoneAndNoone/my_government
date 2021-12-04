@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:my_government/ui/pages/main/bloc/main_bloc.dart';
 
 import 'app.dart';
 
@@ -12,7 +13,9 @@ void main() async {
   runApp(
     MultiBlocProvider(
       providers: [
-        // todo add blocs
+        BlocProvider<MainBloc>(
+          create: (context) => MainBloc(),
+        )
       ],
       child: MyApp(),
     ),

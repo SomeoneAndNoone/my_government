@@ -19,6 +19,7 @@ dependencies:
   flutter_bloc: ^8.0.0
   bloc_concurrency: ^0.2.0
   rxdart: ^0.27.2
+  equatable: ^2.0.3
 
   # animations
   flutter_scale_tap: ^1.0.5
