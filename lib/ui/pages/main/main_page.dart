@@ -19,7 +19,7 @@ class _MainPageState extends State<MainPage> {
     double iconSize = 24.r;
     return Scaffold(
       bottomNavigationBar: CurvedNavigationBar(
-        backgroundColor: Colors.blue,
+        backgroundColor: AppColors.screen,
         items: <Widget>[
           SvgPicture.asset(
             AppImages.homeIcon,
@@ -38,12 +38,13 @@ class _MainPageState extends State<MainPage> {
           ),
         ],
         onTap: (index) {
-          _selectedIndex = index;
-          setState(() {});
+          setState(() {
+            _selectedIndex = index;
+          });
           //Handle button tap
         },
       ),
-      body: Container(color: Colors.blueAccent),
+      body: Container(color: AppColors.screen),
     );
   }
 }
