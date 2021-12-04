@@ -1,0 +1,53 @@
+name: my_government
+description: A new Flutter project.
+
+publish_to: 'none' # Remove this line if you wish to publish to pub.dev
+
+version: 1.0.0+1
+
+environment:
+  sdk: ">=2.12.0 <3.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  intl: ^0.17.0
+
+  # bloc
+  bloc: ^8.0.0
+  flutter_bloc: ^8.0.0
+  bloc_concurrency: ^0.2.0
+  rxdart: ^0.27.2
+
+  # animations
+  flutter_scale_tap: ^1.0.5
+
+  #image
+  cached_network_image: ^3.1.0+1
+  font_awesome_flutter: ^9.2.0
+
+  # ui
+  flutter_screenutil: ^5.0.0+2
+  pull_to_refresh: ^2.0.0
+  curved_navigation_bar: ^1.0.1
+
+  # The following adds the Cupertino Icons font to your application.
+  # Use with the CupertinoIcons class for iOS style icons.
+  cupertino_icons: ^1.0.2
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+  flutter_lints: ^1.0.0
+
+flutter:
+
+  uses-material-design: true
+  generate: true
+  assets:
+    - assets/
+
+flutter_intl:
+  enabled: true
