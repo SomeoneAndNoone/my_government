@@ -12,4 +12,5 @@ abstract class AppImages {
   static String sharhlarTarixi = 'assets/icons/sharhlar_tarixi.svg';
   static String sozlamalar = 'assets/icons/sozlamalar.svg';
   static String yordam = 'assets/icons/yordam.svg';
+  static String backIcon = 'assets/icons/back.svg';
 }
