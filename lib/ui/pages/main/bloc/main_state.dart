@@ -55,6 +55,10 @@ class AccountPageState extends PagesState {
 
 // STATE -------------- MESSAGES STATE ------------
 class MessagesPageState extends MainState {
+  final String message;
+
+  MessagesPageState(this.message);
+
   @override
   List<Object?> get props => [];
 }
