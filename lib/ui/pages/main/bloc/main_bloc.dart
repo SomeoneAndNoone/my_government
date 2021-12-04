@@ -44,7 +44,17 @@ class MainBloc extends Bloc<MainEvent, MainState> {
             emit(NewsPageState());
             break;
           case 2:
-            emit(SavedMessagesPageState());
+            emit(
+              SavedMessagesPageState(
+                [
+                  ...topOrganisationList.where((e) => e.isLiked),
+                  ...engYaxshiOrganisations.where((e) => e.isLiked),
+                  ...topOrganisationList.where((e) => e.isLiked),
+                  ...engYaxshiOrganisations.where((e) => e.isLiked),
+                  ...engYaxshiOrganisations.where((e) => e.isLiked),
+                ],
+              ),
+            );
             break;
           case 3:
             emit(AccountPageState());

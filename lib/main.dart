@@ -24,7 +24,7 @@ void main() async {
       ),
     ),
     (Object error, StackTrace stackTrace) {
-      print('Catched root error in runZonedGuarded');
+      print('Catched root error in runZonedGuarded: $error');
     },
   );
 }

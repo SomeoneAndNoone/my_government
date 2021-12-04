@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_scale_tap/flutter_scale_tap.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:my_government/models/organisation.dart';
 import 'package:my_government/utils/colors.dart';
+import 'package:my_government/utils/images.dart';
 
 class OrganisationCard extends StatelessWidget {
   final Organisation organisation;
@@ -17,7 +19,7 @@ class OrganisationCard extends StatelessWidget {
     return ScaleTap(
       onPressed: () {},
       child: Container(
-        margin: EdgeInsets.only(bottom: 15.h, right: 28.w),
+        margin: EdgeInsets.only(bottom: 15.h),
         width: double.infinity,
         decoration: BoxDecoration(
           color: AppColors.cardBackground,
@@ -26,7 +28,20 @@ class OrganisationCard extends StatelessWidget {
         height: 90.h,
         child: Stack(
           children: [
-            Image.asset(organisation.image),
+            Container(
+              width: 84.w,
+              child: Image.asset(
+                organisation.image,
+                fit: BoxFit.fill,
+              ),
+            ),
+            Positioned(
+              right: 14.w,
+              top: 10.h,
+              child: SvgPicture.asset(
+                organisation.isLiked ? AppImages.heartFilledIcon : AppImages.heartIcon,
+              ),
+            ),
             Positioned(
               top: 10.h,
               left: 88.h,

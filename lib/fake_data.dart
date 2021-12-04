@@ -31,7 +31,7 @@ var engYaxshiOrganisations = [
     name: 'Uzmobile ofis',
     rating: 4.8,
     openCloseTime: '08:00 - 19:00',
-    isLiked: false,
+    isLiked: true,
     ratingCount: 235,
     address: "Farg’ona Viloyat, Marg’ilon\nShahar, Uvaysiy kochasi, 21-uy",
     image: FakeImages.uzmobile,

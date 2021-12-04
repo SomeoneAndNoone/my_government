@@ -49,6 +49,10 @@ class NewsPageState extends PagesState {
 // }
 
 class SavedMessagesPageState extends PagesState {
+  final List<Organisation> organisations;
+
+  SavedMessagesPageState(this.organisations);
+
   @override
   List<Object?> get props => [];
 

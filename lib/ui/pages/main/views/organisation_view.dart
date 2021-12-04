@@ -76,7 +76,8 @@ class _BestOrganisationsListWidget extends StatelessWidget {
         buildWhen: (p, c) => c is OrganisationsPageState,
         builder: (context, state) {
           state as OrganisationsPageState;
-          return Expanded(
+          return Padding(
+            padding: EdgeInsets.only(right: 28.w),
             child: Column(
               children: state.bestRatingOrganisations.map((e) => OrganisationCard(e)).toList(),
               mainAxisSize: MainAxisSize.min,
