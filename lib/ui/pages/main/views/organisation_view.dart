@@ -5,6 +5,7 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:my_government/ui/pages/main/bloc/main_bloc.dart';
 import 'package:my_government/ui/pages/main/bloc/main_state.dart';
 import 'package:my_government/ui/pages/main/components/organisation_big_card.dart';
+import 'package:my_government/ui/pages/main/components/organisation_card.dart';
 import 'package:my_government/utils/colors.dart';
 import 'package:my_government/utils/images.dart';
 
@@ -16,6 +17,7 @@ class OrganisationView extends StatelessWidget {
     return Padding(
       padding: EdgeInsets.only(left: 28.w),
       child: ListView(
+        physics: BouncingScrollPhysics(),
         // crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           SizedBox(height: 20.h),
@@ -57,9 +59,30 @@ class OrganisationView extends StatelessWidget {
               ],
             ),
           ),
+          SizedBox(height: 10.h),
+          _BestOrganisationsListWidget(),
         ],
       ),
     );
+  }
+}
+
+class _BestOrganisationsListWidget extends StatelessWidget {
+  const _BestOrganisationsListWidget({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return BlocBuilder<MainBloc, MainState>(
+        buildWhen: (p, c) => c is OrganisationsPageState,
+        builder: (context, state) {
+          state as OrganisationsPageState;
+          return Expanded(
+            child: Column(
+              children: state.bestRatingOrganisations.map((e) => OrganisationCard(e)).toList(),
+              mainAxisSize: MainAxisSize.min,
+            ),
+          );
+        });
   }
 }
 

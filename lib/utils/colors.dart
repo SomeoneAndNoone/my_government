@@ -7,4 +7,5 @@ abstract class AppColors {
   static const Color borderGrey = Color(0xffE3E3E9);
   static const Color searchColor = Color(0xff79797C);
   static const Color searchTextColor = Color(0xffD2D2D2);
+  static const Color cardBackground = Color(0xfff3f3f3);
 }
