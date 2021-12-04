@@ -3,4 +3,6 @@ abstract class FakeImages {
   static const String qonQuyish = 'assets/fake_images/qon_quyish.jpeg';
   static const String beeline = 'assets/fake_images/beeline.png';
   static const String uzmobile = 'assets/fake_images/uzmobile.png';
+  static const String profileBackgr = 'assets/images/profil_background.png';
+  static const String profile = 'assets/images/profile.png';
 }

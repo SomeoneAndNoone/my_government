@@ -53,6 +53,7 @@ flutter:
     - assets/
     - assets/icons/
     - assets/fake_images/
+    - assets/images/
   fonts:
     - family: Gilroy
       fonts:
