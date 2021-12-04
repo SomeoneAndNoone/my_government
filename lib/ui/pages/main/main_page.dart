@@ -1,7 +1,12 @@
+import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:flutter_svg/flutter_svg.dart';
+import 'package:my_government/utils/colors.dart';
+import 'package:my_government/utils/images.dart';
 
 class MainPage extends StatefulWidget {
-  MainPage({Key? key}) : super(key: key);
+  const MainPage({Key? key}) : super(key: key);
 
   @override
   _MainPageState createState() => _MainPageState();
@@ -10,6 +15,36 @@ class MainPage extends StatefulWidget {
 class _MainPageState extends State<MainPage> {
   @override
   Widget build(BuildContext context) {
-    return Container();
+    double iconSize = 24.r;
+    return Scaffold(
+      bottomNavigationBar: CurvedNavigationBar(
+        backgroundColor: Colors.blue,
+        items: <Widget>[
+          SvgPicture.asset(AppImages.homeIcon,
+              // color: Colors.red,
+              semanticsLabel: 'Home'),
+          SvgPicture.asset(AppImages.homeIcon,
+              // color: Colors.red,
+              semanticsLabel: 'Home'),
+          SvgPicture.asset(AppImages.homeIcon,
+              // color: Colors.red,
+              semanticsLabel: 'Home'),
+          Icon(
+            Icons.compare_arrows,
+            size: iconSize,
+            color: AppColors.primaryColor,
+          ),
+          Icon(
+            Icons.person,
+            size: iconSize,
+            color: AppColors.primaryColor,
+          ),
+        ],
+        onTap: (index) {
+          //Handle button tap
+        },
+      ),
+      body: Container(color: Colors.blueAccent),
+    );
   }
 }
