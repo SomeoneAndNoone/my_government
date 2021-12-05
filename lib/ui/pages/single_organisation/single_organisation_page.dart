@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_scale_tap/flutter_scale_tap.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:my_government/fake_data.dart';
@@ -210,7 +211,61 @@ class _InformationWidget extends StatelessWidget {
               fontSize: 18.sp,
             ),
           ),
-          SizedBox(height: 30.h),
+          SizedBox(height: 10.h),
+          GridView.count(
+            shrinkWrap: true,
+            crossAxisCount: 2,
+            padding: EdgeInsets.zero,
+            physics: const ClampingScrollPhysics(),
+            scrollDirection: Axis.vertical,
+            children: ishchilarList
+                .map(
+                  (e) => ScaleTap(
+                    onPressed: () {},
+                    child: Container(
+                      color: Colors.transparent,
+                      child: Padding(
+                        padding: EdgeInsets.only(
+                          right: 8.w,
+                          top: 40.h,
+                          bottom: 40.h,
+                        ),
+                        child: Container(
+                          color: Colors.white,
+                          child: Row(
+                            children: [
+                              SizedBox(width: 10.w),
+                              Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                mainAxisSize: MainAxisSize.min,
+                                children: [
+                                  Text(
+                                    e.name,
+                                    style: TextStyle(
+                                      fontSize: 14.sp,
+                                      fontWeight: FontWeight.w600,
+                                    ),
+                                  ),
+                                  SizedBox(height: 5.h),
+                                  Text(
+                                    e.title,
+                                    style: TextStyle(
+                                      color: AppColors.primaryColor,
+                                      fontSize: 12.sp,
+                                      fontWeight: FontWeight.w600,
+                                    ),
+                                  ),
+                                ],
+                              )
+                            ],
+                          ),
+                        ),
+                      ),
+                    ),
+                  ),
+                )
+                .toList(),
+          )
         ],
       ),
     );

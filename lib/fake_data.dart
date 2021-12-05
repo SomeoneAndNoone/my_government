@@ -66,3 +66,21 @@ var rahbarlarList = [
   Employee('Jasurbek Umarov', "Boshlig' yordamchisi"),
   Employee("Umid Hakimov", "Jinoyat qidiruv boshlig'i"),
 ];
+
+var ishchilarList = [
+  Employee('Jahongir Sultonov', "Ishchi lavozimi"),
+  Employee('Jahongir Sultonov', "Ishchi lavozimi"),
+  Employee('Jahongir Sultonov', "Ishchi lavozimi"),
+  Employee('Jahongir Sultonov', "Ishchi lavozimi"),
+  Employee('Jahongir Sultonov', "Ishchi lavozimi"),
+  Employee('Jahongir Sultonov', "Ishchi lavozimi"),
+  Employee('Jahongir Sultonov', "Ishchi lavozimi"),
+  Employee('Jahongir Sultonov', "Ishchi lavozimi"),
+  Employee('Jahongir Sultonov', "Ishchi lavozimi"),
+  Employee('Jahongir Sultonov', "Ishchi lavozimi"),
+  Employee('Jahongir Sultonov', "Ishchi lavozimi"),
+  Employee('Jahongir Sultonov', "Ishchi lavozimi"),
+  Employee('Jahongir Sultonov', "Ishchi lavozimi"),
+  Employee('Jahongir Sultonov', "Ishchi lavozimi"),
+  Employee('Jahongir Sultonov', "Ishchi lavozimi"),
+];
