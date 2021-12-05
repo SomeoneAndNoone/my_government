@@ -19,7 +19,7 @@ A few resources to get you started if this is your first Flutter project:
   ![alt text](https://github.com/SomeoneAndNoone/my_government/blob/main/assets/screenshotlar/5.jpg)
   ![alt text](https://github.com/SomeoneAndNoone/my_government/blob/main/assets/screenshotlar/6.jpg)
   ![alt text](https://github.com/SomeoneAndNoone/my_government/blob/main/assets/screenshotlar/7.jpg)
-  <img src="https://github.com/SomeoneAndNoone/my_government/blob/main/assets/screenshotlar/7.jpg" width="48">
+  <img src="https://github.com/SomeoneAndNoone/my_government/blob/main/assets/screenshotlar/7.jpg" width="200">
 
 
 
