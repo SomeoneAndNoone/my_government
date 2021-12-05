@@ -4,6 +4,7 @@ import 'package:flutter_scale_tap/flutter_scale_tap.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:my_government/fake_data.dart';
+import 'package:my_government/ui/pages/single_person/single_person.dart';
 import 'package:my_government/utils/colors.dart';
 import 'package:my_government/utils/fake_images.dart';
 import 'package:my_government/utils/images.dart';
@@ -25,7 +26,7 @@ class SingleOrganisationPage extends StatelessWidget {
                 SizedBox(
                   width: double.infinity,
                   child: Image.asset(
-                    FakeImages.organisationBackground,
+                    FakeImages.ichkiIshlar,
                     fit: BoxFit.fill,
                   ),
                 ),
@@ -222,7 +223,10 @@ class _InformationWidget extends StatelessWidget {
             children: ishchilarList
                 .map(
                   (e) => ScaleTap(
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.of(context)
+                          .push(MaterialPageRoute(builder: (context) => SinglePerson()));
+                    },
                     child: Container(
                       color: Colors.transparent,
                       child: Padding(
@@ -296,7 +300,7 @@ class _CommentsWidget extends StatelessWidget {
           SizedBox(height: 15.h),
           Center(
             child: ScaleTap(
-              onPressed: (){},
+              onPressed: () {},
               child: Container(
                 padding: EdgeInsets.symmetric(horizontal: 20.w, vertical: 12.h),
                 decoration: BoxDecoration(

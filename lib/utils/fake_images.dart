@@ -14,4 +14,5 @@ abstract class FakeImages {
   static const String organisationMap = 'assets/fake_images/organisation_map.png';
   static const String rahbariyatImage = 'assets/fake_images/rahbariyat_image.png';
   static const String cardImage = 'assets/fake_images/card_image.png';
+  static const String ichkiIshlarVaziri = 'assets/fake_images/ichki_ishlar_vaziri.jpeg';
 }
