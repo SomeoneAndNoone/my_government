@@ -1,3 +1,4 @@
+import 'package:my_government/models/employee.dart';
 import 'package:my_government/utils/fake_images.dart';
 
 import 'models/news.dart';
@@ -58,4 +59,10 @@ var newsList = [
     "John Blackning qing'ir ishlari negative sharhlar orqali aniqlandi",
     FakeImages.jonBlack,
   )
+];
+
+var rahbarlarList = [
+  Employee('Fayzulloxon Muxtorov', "Bo'lim boshlig'i"),
+  Employee('Jasurbek Umarov', "Boshlig' yordamchisi"),
+  Employee("Umid Hakimov", "Jinoyat qidiruv boshlig'i"),
 ];
