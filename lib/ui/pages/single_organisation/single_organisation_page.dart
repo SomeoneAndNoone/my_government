@@ -14,6 +14,7 @@ class SingleOrganisationPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.white,
       body: ListView(
         physics: const BouncingScrollPhysics(),
         children: [
@@ -277,7 +278,45 @@ class _CommentsWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return Padding(
+      padding: EdgeInsets.symmetric(horizontal: 28.w),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          SizedBox(height: 15.h),
+          Text(
+            'Foydalanuvchi sharhlari',
+            style: TextStyle(
+              fontWeight: FontWeight.w600,
+              fontSize: 18.sp,
+            ),
+          ),
+          SizedBox(height: 15.h),
+          Image.asset(FakeImages.cardImage),
+          SizedBox(height: 15.h),
+          Center(
+            child: ScaleTap(
+              onPressed: (){},
+              child: Container(
+                padding: EdgeInsets.symmetric(horizontal: 20.w, vertical: 12.h),
+                decoration: BoxDecoration(
+                  color: AppColors.primaryColor,
+                  borderRadius: BorderRadius.circular(8.r),
+                ),
+                child: Text(
+                  "Sharh qo'shish",
+                  style: TextStyle(
+                    color: Colors.white,
+                    fontWeight: FontWeight.w700,
+                    fontSize: 18.sp,
+                  ),
+                ),
+              ),
+            ),
+          )
+        ],
+      ),
+    );
   }
 }
 
