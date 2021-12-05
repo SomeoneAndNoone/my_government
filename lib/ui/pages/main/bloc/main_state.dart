@@ -1,4 +1,5 @@
 import 'package:equatable/equatable.dart';
+import 'package:my_government/models/news.dart';
 import 'package:my_government/models/organisation.dart';
 
 abstract class MainState extends Equatable {}
@@ -33,6 +34,10 @@ class OrganisationsPageState extends PagesState {
 }
 
 class NewsPageState extends PagesState {
+  final List<News> newsList;
+
+  NewsPageState(this.newsList);
+
   @override
   List<Object?> get props => [];
 

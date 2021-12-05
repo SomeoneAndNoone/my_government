@@ -1,5 +1,6 @@
 import 'package:my_government/utils/fake_images.dart';
 
+import 'models/news.dart';
 import 'models/organisation.dart';
 
 var topOrganisationList = [
@@ -45,5 +46,16 @@ var engYaxshiOrganisations = [
     ratingCount: 235,
     address: "Farg’ona Viloyat, Marg’ilon\nShahar, Qo'shbuloq kochasi, 19-uy",
     image: FakeImages.beeline,
+  )
+];
+
+var newsList = [
+  News(
+    'Yilning eng yaxshi deputati kim?',
+    FakeImages.deputat,
+  ),
+  News(
+    "John Blackning qing'ir ishlari negative sharhlar orqali aniqlandi",
+    FakeImages.jonBlack,
   )
 ];

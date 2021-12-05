@@ -41,7 +41,7 @@ class MainBloc extends Bloc<MainEvent, MainState> {
             );
             break;
           case 1:
-            emit(NewsPageState());
+            emit(NewsPageState(newsList));
             break;
           case 2:
             emit(
