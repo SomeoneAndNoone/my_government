@@ -3,6 +3,7 @@ import 'package:flutter_scale_tap/flutter_scale_tap.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:my_government/models/organisation.dart';
+import 'package:my_government/ui/pages/single_organisation/single_organisation_page.dart';
 import 'package:my_government/utils/colors.dart';
 import 'package:my_government/utils/images.dart';
 
@@ -17,7 +18,10 @@ class OrganisationCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ScaleTap(
-      onPressed: () {},
+      onPressed: () {
+        Navigator.of(context)
+            .push(MaterialPageRoute(builder: (context) => SingleOrganisationPage()));
+      },
       child: Container(
         margin: EdgeInsets.only(bottom: 15.h),
         width: double.infinity,

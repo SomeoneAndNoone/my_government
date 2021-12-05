@@ -7,4 +7,10 @@ abstract class FakeImages {
   static const String profile = 'assets/images/profile.png';
   static const String jonBlack = 'assets/fake_images/jon_black.jpeg';
   static const String deputat = 'assets/fake_images/deputat.jpeg';
+  static const String accountImage = 'assets/fake_images/account_image.jpeg';
+  static const String accountImage2 = 'assets/fake_images/account_image_2.jpeg';
+  static const String anonymousAccount = 'assets/fake_images/anonymous_account.jpeg';
+  static const String organisationBackground = 'assets/fake_images/organisation_background.jpeg';
+  static const String organisationMap = 'assets/fake_images/organisation_map.jpeg';
+  static const String rahbariyatImage = 'assets/fake_images/rahbariyat_image.jpeg';
 }
